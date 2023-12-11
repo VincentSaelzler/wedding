@@ -30,6 +30,7 @@ jekyll new website
 
 When creating new containers, run this command each time. It cannot (easily) be part of the Dockerfile because the dev containers extension hasn't yet created the bind mount to the code repo, so the Gemfile doesn't exist in the container yet.
 ```sh
+cd website
 bundle install
 # this warning can be safely ignored, because no other users are in the container
 # Don't run Bundler as root. Installing your bundle as root will break this application for all non-root users on this machine.
